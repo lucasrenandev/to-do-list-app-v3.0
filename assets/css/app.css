@@ -81,7 +81,7 @@
 
 .to-do-list .input-field button i  {
     font-size: 25px;
-    transition: rotate 0.4s ease-out;
+    transition: rotate 0.2s ease-out;
 }
 .to-do-list .input-field button:hover i {
     rotate: 180deg;
@@ -116,7 +116,7 @@
     user-select: none;
     word-wrap: break-word;
     word-break: break-all;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-out;
 }
 .to-do-list .task-list li.completed {
     color: #00ff0080;
@@ -151,7 +151,7 @@
     font-size: 16px;
     cursor: pointer;
     z-index: 1;
-    transition: all 0.4s ease-out;
+    transition: all 0.2s ease-out;
 }
 .to-do-list .task-list li span:hover {
     scale: 1.1;

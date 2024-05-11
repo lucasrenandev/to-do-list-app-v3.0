@@ -52,8 +52,8 @@ function editTask(event) {
     const editElement = list.querySelector(".edit-box input");
     const pencil = list.querySelector(".pencil");
     const trash = list.querySelector(".trash");
-
-    const editTask = (event) => {
+    
+    const editedTask = (event) => {
         if(event.code === "Enter") {
             if(editElement.value) {
                 list.textContent = editElement.value;
@@ -68,11 +68,11 @@ function editTask(event) {
     if(!editBox.classList.contains("open")) {
         editBox.classList.add("open");
         editElement.value = list.textContent.slice(0, -2);
-        editElement.addEventListener("keydown", editTask);
+        editElement.addEventListener("keydown", editedTask);
     }
     else {
         editBox.classList.remove("open");
-        editElement.removeEventListener("keydown", editTask);
+        editElement.removeEventListener("keydown", editedTask);
     }
 }
 
@@ -112,7 +112,7 @@ taskList.addEventListener("click", function(event) {
 window.addEventListener("load", function() {
     let isPageReloaded = false;
     if(!isPageReloaded) {
-        const editBoxs = this.document.querySelectorAll(".edit-box");
+        const editBoxs = this.document.querySelectorAll(".task-list .list .edit-box");
         editBoxs.forEach((box) => {
             box.classList.remove("open");
             isPageReloaded = true;
